@@ -1,0 +1,22 @@
+{
+  "name": "@dnd-mcp/test-coverage",
+  "version": "1.0.0",
+  "description": "MCP server for dnd-ui Vitest coverage analysis",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["mcp", "test-coverage", "vitest", "dnd-ui"],
+  "author": "Caleb James",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.8.0"
+  }
+}

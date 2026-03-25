@@ -1,0 +1,22 @@
+{
+  "name": "@dnd-mcp/dnd-domain",
+  "version": "1.0.0",
+  "description": "D&D 5e domain knowledge MCP server for dnd-ui agents",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["mcp", "dnd", "domain-knowledge", "dnd5e"],
+  "author": "Caleb James",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.8.0"
+  }
+}

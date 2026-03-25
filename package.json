@@ -1,0 +1,17 @@
+{
+  "name": "dnd-mcp-servers",
+  "version": "1.0.0",
+  "description": "MCP servers for dnd-ui",
+  "private": true,
+  "scripts": {
+    "build:all": "npm run build --workspaces",
+    "build:test-coverage": "npm run build --workspace=test-coverage",
+    "build:agent-analytics": "npm run build --workspace=agent-analytics",
+    "build:component-map": "npm run build --workspace=component-map",
+    "build:code-standards": "npm run build --workspace=code-standards",
+    "build:dnd-domain": "npm run build --workspace=dnd-domain",
+    "build:game-server": "npm run build --workspace=game-server"
+  },
+  "author": "Caleb James",
+  "license": "MIT"
+}

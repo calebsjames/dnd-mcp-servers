@@ -1,0 +1,22 @@
+{
+  "name": "@dnd-mcp/agent-analytics",
+  "version": "1.0.0",
+  "description": "MCP server for analyzing dnd-ui agent effectiveness from agent-log.json",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["mcp", "agent-analytics", "dnd-ui"],
+  "author": "Caleb James",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "typescript": "^5.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
+  }
+}

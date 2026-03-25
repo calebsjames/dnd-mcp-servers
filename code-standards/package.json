@@ -1,0 +1,23 @@
+{
+  "name": "@dnd-mcp/code-standards",
+  "version": "1.0.0",
+  "description": "MCP server for dnd-ui code standards validation",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["mcp", "code-standards", "dnd-ui"],
+  "author": "Caleb James",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "glob": "^11.0.0",
+    "typescript": "^5.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
+  }
+}
