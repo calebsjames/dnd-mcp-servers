@@ -69,14 +69,18 @@ const server = new Server(
 );
 
 let cachedTools: ToolDefinition[] = [];
+let toolsFetched = false;
 
-// List tools — fetched from the NestJS API
+// List tools — fetched from the NestJS API (once, then cached for process lifetime)
 server.setRequestHandler(ListToolsRequestSchema, async () => {
-  try {
-    cachedTools = await fetchToolDefinitions();
-    console.error(`Loaded ${cachedTools.length} game tools from API`);
-  } catch (error) {
-    console.error("Failed to fetch tools, using cached:", error);
+  if (!toolsFetched) {
+    try {
+      cachedTools = await fetchToolDefinitions();
+      toolsFetched = true;
+      console.error(`Loaded ${cachedTools.length} game tools from API`);
+    } catch (error) {
+      console.error("Failed to fetch tools:", error);
+    }
   }
 
   const tools: Tool[] = cachedTools.map((t) => ({
@@ -113,7 +117,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     return {
       content: [{
         type: "text",
-        text: JSON.stringify(result.data ?? result, null, 2),
+        text: JSON.stringify(result.data ?? result),
       }],
     };
   } catch (error) {
